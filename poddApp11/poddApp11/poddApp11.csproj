@@ -46,10 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BLL\Kategori.cs" />
+    <Compile Include="BLL\PoddcastLopp.cs" />
+    <Compile Include="BLL\Podden.cs" />
+    <Compile Include="BLL\ValideraException.cs" />
+    <Compile Include="BLL\ValideraMeddelanden.cs" />
+    <Compile Include="DL\LaddaXML.cs" />
+    <Compile Include="DL\RssLasare.cs" />
+    <Compile Include="DL\SparaXML.cs" />
+    <Compile Include="DL\TaBortXML.cs" />
+    <Compile Include="PL\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="PL\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -76,10 +85,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DL\" />
-    <Folder Include="PL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
