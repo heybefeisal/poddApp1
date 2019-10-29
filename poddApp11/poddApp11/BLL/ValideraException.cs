@@ -37,6 +37,10 @@ namespace poddAppen.BLL
                 meddelande.tomFrekvens();
                 return false; 
             }
+            else
+            {
+                return true;
+            }
         }
         
         public bool IckeVald(ListView list)
@@ -60,6 +64,10 @@ namespace poddAppen.BLL
                 meddelande.tomKategori();
                 return false;
             }
+            else
+            {
+                return true;
+            }
         }
              
         public bool IckeTomUrl(TextBox textBox)
@@ -68,6 +76,10 @@ namespace poddAppen.BLL
             {
                 meddelande.tomUrl();
                 return false;
+            }
+            else
+            {
+                return true;
             }
         }
 
