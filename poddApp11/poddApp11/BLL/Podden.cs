@@ -1,43 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using poddApp11.DL;
+
 
 namespace poddAppen.BLL
 {
-    public abstract class Podden
+    public class Podden : IInterface 
     { 
-        public virtual void laggTill(ListView list, string avsnittRaknare, string poddTitel, string frekvens, string kategori, string url )
+        private string url { get; set; }
+
+        private string poddTitel { get; set; }
+
+        private int uppFrekvens { get; set; }
+
+        private string kategori { get; set; }
+
+        private int antalAvs { get; set; }
+
+        public Podden(string poddensTitel, int frek, string kategori, int antalAv, string url)
         {
-            var listVItem = new ListViewItem(new[] {
-                avsnittRaknare,
-                poddTitel,
-                frekvens,
-                kategori
-            });
-            list.Items.Add(listVItem);
-            listVItem.Tag = url;
+            poddTitel = poddensTitel;
+            uppFrekvens = frek;
+            this.kategori = kategori;
+            this.antalAvs = antalAv;
+            this.url = url;
+
+
         }
 
-        public virtual void laggTill(ListView list, string objekt)
+        public Podden()
         {
-            var listVItem = new ListViewItem(new[]
-            {
-                objekt,
-            });
-            list.Items.Add(listVItem);
+
         }
 
-        public virtual void taBort(ListView list)
+        public string PoddTitel
         {
-            list.SelectedItems[0].Remove();
+            get => poddTitel;
+            set => poddTitel = value;
         }
 
-        public virtual void sparaAndring(ListView listViewKategori, TextBox textBox)
+        public int uppFrek
         {
-            listViewKategori.SelectedItems[0].Text = textBox.Text;
+            get => uppFrekvens;
+            set => uppFrekvens = value;
         }
+
+        public string Kategorier
+        {
+            get => kategori;
+            set => kategori = value;
+        }
+
+        public string Url
+        {
+            get => url;
+            set => url = value;
+        }
+
+        public int AnAvsnitt
+        {
+            get => antalAvs;
+            set => antalAvs = value;
+        }
+
     }
+
+    
 }

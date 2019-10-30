@@ -30,7 +30,6 @@
         {
             this.listViewPoddar = new System.Windows.Forms.ListView();
             this.listViewPoddarAvsnitt = new System.Windows.Forms.ListView();
-            this.listViewKategori = new System.Windows.Forms.ListView();
             this.textBoxAvsSammanfattning = new System.Windows.Forms.TextBox();
             this.textBoxUrl = new System.Windows.Forms.TextBox();
             this.comboBoxUppdatering = new System.Windows.Forms.ComboBox();
@@ -47,16 +46,27 @@
             this.labelUpp = new System.Windows.Forms.Label();
             this.labelKategori = new System.Windows.Forms.Label();
             this.labelPoddAvs = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.PoddNamn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Kategori = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Avsnitt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Frekvens = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listViewPoddar
             // 
-            this.listViewPoddar.HideSelection = false;
+            this.listViewPoddar.BackColor = System.Drawing.SystemColors.Menu;
+            this.listViewPoddar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.PoddNamn,
+            this.Kategori,
+            this.Avsnitt,
+            this.Frekvens});
             this.listViewPoddar.Location = new System.Drawing.Point(24, 36);
             this.listViewPoddar.Name = "listViewPoddar";
             this.listViewPoddar.Size = new System.Drawing.Size(497, 223);
             this.listViewPoddar.TabIndex = 0;
             this.listViewPoddar.UseCompatibleStateImageBehavior = false;
+            this.listViewPoddar.SelectedIndexChanged += new System.EventHandler(this.listViewPoddar_SelectedIndexChanged);
             // 
             // listViewPoddarAvsnitt
             // 
@@ -66,15 +76,6 @@
             this.listViewPoddarAvsnitt.Size = new System.Drawing.Size(497, 161);
             this.listViewPoddarAvsnitt.TabIndex = 1;
             this.listViewPoddarAvsnitt.UseCompatibleStateImageBehavior = false;
-            // 
-            // listViewKategori
-            // 
-            this.listViewKategori.HideSelection = false;
-            this.listViewKategori.Location = new System.Drawing.Point(620, 36);
-            this.listViewKategori.Name = "listViewKategori";
-            this.listViewKategori.Size = new System.Drawing.Size(303, 148);
-            this.listViewKategori.TabIndex = 2;
-            this.listViewKategori.UseCompatibleStateImageBehavior = false;
             // 
             // textBoxAvsSammanfattning
             // 
@@ -213,12 +214,39 @@
             this.labelPoddAvs.TabIndex = 18;
             this.labelPoddAvs.Text = "label1";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(620, 36);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(303, 148);
+            this.listBox1.TabIndex = 19;
+            // 
+            // PoddNamn
+            // 
+            this.PoddNamn.Text = "PoddNamn";
+            this.PoddNamn.Width = 100;
+            // 
+            // Kategori
+            // 
+            this.Kategori.Text = "Kategori";
+            // 
+            // Avsnitt
+            // 
+            this.Avsnitt.Text = "Avsnitt";
+            // 
+            // Frekvens
+            // 
+            this.Frekvens.Text = "Frekvens";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(950, 573);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.labelPoddAvs);
             this.Controls.Add(this.labelKategori);
             this.Controls.Add(this.labelUpp);
@@ -235,7 +263,6 @@
             this.Controls.Add(this.comboBoxUppdatering);
             this.Controls.Add(this.textBoxUrl);
             this.Controls.Add(this.textBoxAvsSammanfattning);
-            this.Controls.Add(this.listViewKategori);
             this.Controls.Add(this.listViewPoddarAvsnitt);
             this.Controls.Add(this.listViewPoddar);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -251,7 +278,6 @@
 
         private System.Windows.Forms.ListView listViewPoddar;
         private System.Windows.Forms.ListView listViewPoddarAvsnitt;
-        private System.Windows.Forms.ListView listViewKategori;
         private System.Windows.Forms.TextBox textBoxAvsSammanfattning;
         private System.Windows.Forms.TextBox textBoxUrl;
         private System.Windows.Forms.ComboBox comboBoxUppdatering;
@@ -268,6 +294,11 @@
         private System.Windows.Forms.Label labelUpp;
         private System.Windows.Forms.Label labelKategori;
         private System.Windows.Forms.Label labelPoddAvs;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ColumnHeader PoddNamn;
+        private System.Windows.Forms.ColumnHeader Kategori;
+        private System.Windows.Forms.ColumnHeader Avsnitt;
+        private System.Windows.Forms.ColumnHeader Frekvens;
     }
 }
 

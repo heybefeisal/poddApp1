@@ -47,15 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\AvsnitssInformation.cs" />
+    <Compile Include="BLL\AvsnittLista.cs" />
+    <Compile Include="BLL\Avsnitt.cs" />
+    <Compile Include="BLL\EnVag.cs" />
+    <Compile Include="BLL\Frekvens.cs" />
     <Compile Include="BLL\Kategori.cs" />
-    <Compile Include="BLL\PoddcastLopp.cs" />
+    <Compile Include="BLL\KategoriListor.cs" />
     <Compile Include="BLL\Podden.cs" />
-    <Compile Include="BLL\ValideraException.cs" />
-    <Compile Include="BLL\ValideraMeddelanden.cs" />
-    <Compile Include="DL\LaddaXML.cs" />
-    <Compile Include="DL\RssLasare.cs" />
-    <Compile Include="DL\SparaXML.cs" />
-    <Compile Include="DL\TaBortXML.cs" />
+    <Compile Include="BLL\PoddLista.cs" />
+    <Compile Include="BLL\ValideraKod.cs" />
+    <Compile Include="DL\HanteraXmlFiler.cs" />
+    <Compile Include="BLL\IInterface.cs" />
+    <Compile Include="DL\lasRss.cs" />
+    <Compile Include="Validering\ValideraException.cs" />
+    <Compile Include="Validering\ValideraMeddelanden.cs" />
     <Compile Include="PL\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
