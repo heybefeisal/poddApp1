@@ -2,12 +2,9 @@
 using poddAppen.BLL;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace poddApp11
@@ -21,6 +18,7 @@ namespace poddApp11
 
         private void Form1_Load(object sender, EventArgs ev)
         {
+            UFrekvens frekvens = new UFrekvens();
             new PoddLista();
             new AvsnittLista();
             new KategoriListor();
@@ -30,7 +28,7 @@ namespace poddApp11
             UppdateraPoddListView();
             UppdateraKategori1();
             UppdateraKategori2();
-            //Frekvens.CatchPoddUpdate += new EventHandler(FangaEventen);
+          frekvens..FangaUppdatering += new EventHandler(FangaEventen); 
 
         }
 
@@ -274,5 +272,32 @@ namespace poddApp11
         {
             
         }
+
+        private void comboBoxUppdatering_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLaggTillPodd_Click_1(object sender, EventArgs e)
+        {
+            var url = textBoxUrl.Text;
+            int uppFrekvens = Convert.ToInt32(comboBoxUppdatering.Text.Split(' ')[0]);
+            var kategori = comboBoxKategori.Text;
+
+            BLL.EnVag.laggTillPodd(url, uppFrekvens, kategori);
+            UppdateraPoddListView();
+        }
+
+        private void buttonTaBortPodd_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxUrl_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+ 
     }
 }

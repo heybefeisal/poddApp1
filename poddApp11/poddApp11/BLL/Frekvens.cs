@@ -13,6 +13,8 @@ namespace poddApp11.BLL
     public class UFrekvens
     {
 
+        public static event EventHandler FangaUppdatering;
+
         public static Boolean AndraTid(ListViewItem list)
         {
 
@@ -42,7 +44,7 @@ namespace poddApp11.BLL
                     return false;
             }
         }
-        public static event EventHandler FangaUppdatering;
+      
 
         private static int startaVagen(int frekvens)
         {

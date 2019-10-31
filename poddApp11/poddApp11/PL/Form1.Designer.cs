@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.listViewPoddar = new System.Windows.Forms.ListView();
+            this.PoddNamn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Kategori = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Avsnitt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Frekvens = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listViewPoddarAvsnitt = new System.Windows.Forms.ListView();
             this.textBoxAvsSammanfattning = new System.Windows.Forms.TextBox();
             this.textBoxUrl = new System.Windows.Forms.TextBox();
@@ -47,10 +51,6 @@
             this.labelKategori = new System.Windows.Forms.Label();
             this.labelPoddAvs = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.PoddNamn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Kategori = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Avsnitt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Frekvens = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listViewPoddar
@@ -61,12 +61,30 @@
             this.Kategori,
             this.Avsnitt,
             this.Frekvens});
+            this.listViewPoddar.HideSelection = false;
             this.listViewPoddar.Location = new System.Drawing.Point(24, 36);
             this.listViewPoddar.Name = "listViewPoddar";
             this.listViewPoddar.Size = new System.Drawing.Size(497, 223);
             this.listViewPoddar.TabIndex = 0;
             this.listViewPoddar.UseCompatibleStateImageBehavior = false;
             this.listViewPoddar.SelectedIndexChanged += new System.EventHandler(this.listViewPoddar_SelectedIndexChanged);
+            // 
+            // PoddNamn
+            // 
+            this.PoddNamn.Text = "PoddNamn";
+            this.PoddNamn.Width = 100;
+            // 
+            // Kategori
+            // 
+            this.Kategori.Text = "Kategori";
+            // 
+            // Avsnitt
+            // 
+            this.Avsnitt.Text = "Avsnitt";
+            // 
+            // Frekvens
+            // 
+            this.Frekvens.Text = "Frekvens";
             // 
             // listViewPoddarAvsnitt
             // 
@@ -91,6 +109,7 @@
             this.textBoxUrl.Name = "textBoxUrl";
             this.textBoxUrl.Size = new System.Drawing.Size(217, 22);
             this.textBoxUrl.TabIndex = 4;
+            this.textBoxUrl.TextChanged += new System.EventHandler(this.textBoxUrl_TextChanged);
             // 
             // comboBoxUppdatering
             // 
@@ -99,6 +118,7 @@
             this.comboBoxUppdatering.Name = "comboBoxUppdatering";
             this.comboBoxUppdatering.Size = new System.Drawing.Size(116, 24);
             this.comboBoxUppdatering.TabIndex = 5;
+            this.comboBoxUppdatering.SelectedIndexChanged += new System.EventHandler(this.comboBoxUppdatering_SelectedIndexChanged);
             // 
             // comboBoxKategori
             // 
@@ -123,6 +143,7 @@
             this.buttonLaggTillPodd.TabIndex = 8;
             this.buttonLaggTillPodd.Text = "Ny";
             this.buttonLaggTillPodd.UseVisualStyleBackColor = true;
+            this.buttonLaggTillPodd.Click += new System.EventHandler(this.buttonLaggTillPodd_Click_1);
             // 
             // buttonTaBortPodd
             // 
@@ -132,6 +153,7 @@
             this.buttonTaBortPodd.TabIndex = 9;
             this.buttonTaBortPodd.Text = "Ta bort";
             this.buttonTaBortPodd.UseVisualStyleBackColor = true;
+            this.buttonTaBortPodd.Click += new System.EventHandler(this.buttonTaBortPodd_Click_1);
             // 
             // buttonSparaPodd
             // 
@@ -159,6 +181,7 @@
             this.buttonSparaKat.TabIndex = 12;
             this.buttonSparaKat.Text = "Spara";
             this.buttonSparaKat.UseVisualStyleBackColor = true;
+            this.buttonSparaKat.Click += new System.EventHandler(this.btnSparaKat_Click);
             // 
             // buttonLaggTillKat
             // 
@@ -222,23 +245,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(303, 148);
             this.listBox1.TabIndex = 19;
-            // 
-            // PoddNamn
-            // 
-            this.PoddNamn.Text = "PoddNamn";
-            this.PoddNamn.Width = 100;
-            // 
-            // Kategori
-            // 
-            this.Kategori.Text = "Kategori";
-            // 
-            // Avsnitt
-            // 
-            this.Avsnitt.Text = "Avsnitt";
-            // 
-            // Frekvens
-            // 
-            this.Frekvens.Text = "Frekvens";
             // 
             // Form1
             // 

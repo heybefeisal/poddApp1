@@ -60,8 +60,6 @@
     <Compile Include="DL\HanteraXmlFiler.cs" />
     <Compile Include="BLL\IInterface.cs" />
     <Compile Include="DL\lasRss.cs" />
-    <Compile Include="Validering\ValideraException.cs" />
-    <Compile Include="Validering\ValideraMeddelanden.cs" />
     <Compile Include="PL\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
